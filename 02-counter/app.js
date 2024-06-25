@@ -2,17 +2,17 @@
 let count = 0;
 
 // HTML要素の取得
-const value = document.getElementById('value');
+const value = document.querySelector('#value');
 const btns = document.querySelectorAll('.btn');
-// console.log(btns)
+// console.log(btns)`
 
-btns.forEach(function (btn) {
-    btn.addEventListener('click', function(e) {
+btns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
         const styles = e.currentTarget.classList;
         if (styles.contains('decrease')) {
-            count --;
+            count--;
         } else if (styles.contains('increase')) {
-            count ++;
+            count++;
         } else if (styles.contains('reset')) {
             count = 0;
         }
